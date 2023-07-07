@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: darkcyan;
+}
+
+.container {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login {
+    width: 400px;
+    position: absolute;
+}
+
+form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: blue;
+    text-align: center;
+}
+
+.caixa-entrada {
+    position: relative;
+    margin: 25px 0;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: beige;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.esqueceu-senha {
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.esqueceu-senha a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: blue;
+}
+
+.esqueceu-senha:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: cyan;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: black;
+    font-weight: 700;
+}
+
+.cadastre-link {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.cadastre-link a {
+    font-size: 0.8em;
+    color: blue;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.cadastre-link a:hover {
+    text-decoration: underline;
+}
+
+span {
+    position: absolute;
+    left: 0;
+    width: 2em;
+    height: 6px;
+    background: rgb(1, 1, 53);
+    border-radius: 8px;
+
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    transform-origin: 120px;
+    animation: rotacao 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+
+}
+
+    @keyframes rotacao {
+        0%{
+            background: cyan;
+        }
+        25%{
+            background: blue;
+        }
+    }
+
+.caixa-entrada input:focus~label,
+.caixa-entrada input:valid~label {
+    top: 1px;
+    font-size: 0.8em;
+    background: darkcyan;
+    padding: 0 6px;
+    color: lightblue;
+}
+
+.caixa-entrada input:focus~label,
+.caixa-entrada input:valid~label {
+    border-color: lightblue;
+}
+
+.caixa-entrada input {
+    font-size: 1em;
+    color: white;
+    padding: 0 20px;
+}
